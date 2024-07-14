@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Music Player</h1>
+      <button id="toggleThemeBtn">Toggle Theme</button>
+    </header>
+    <main>
+      <div class="all-song divs">
+        <div>
+          <label for="songtype">Filter by Genre:</label>
+          <select name="songtype" id="songtype">
+            <option value="all">All</option>
+            <option value="hiphop">Hiphop</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+          </select>
+        </div>
+        <div>
+          <label for="searchSongInput">Search Songs:</label>
+          <input type="text" id="searchSongInput" placeholder="Search for songs...">
+        </div>
+        <h3>All Songs</h3>
+        <div class="all-song-container"></div>
+      </div>
+      <div class="song-card divs">
+        <div class="card"></div>
+        <div class="playButton">
+          <audio src="" controls class="audiotag"></audio>
+        </div>
+        <div>
+          <button class="next">Next</button>
+          <button class="prev">Prev</button>
+        </div>
+        <button class="AddPlaylist">Add to Playlist</button>
+      </div>
+      <div class="playlist divs">
+        <div style="display: flex; gap: 20px;">
+          <input type="text" id="playlistName" placeholder="Enter playlist name">
+          <button class="createPlaylist">Create Playlist</button>
+        </div>
+        <div>
+          <label for="searchPlaylistInput">Search Playlists:</label>
+          <input type="text" id="searchPlaylistInput" placeholder="Search for playlists...">
+        </div>
+        <div class="current">
+          <h2>Current Playlist</h2>
+          <div class="currentPlaylist"></div>
+        </div>
+        <div class="new">
+          <h2>New Playlists</h2>
+          <div class="newPlaylist"></div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+
